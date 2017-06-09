@@ -1,0 +1,65 @@
+<html>
+
+<head>
+
+    <title>Jquery</title>
+    <script type="text/javascript", src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+        #pswd_info {
+        right: 55px;
+        width: 300px;
+        padding: 15px;
+        background: #fefefe;
+        font-size: .875em;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px #ccc;
+        border: 1px solid #ddd;
+        }
+        .valid {
+            padding-left: 22px;
+            line-height: 24px;
+            color: green;
+        }
+        .invalid {
+            padding-left: 22px;
+            line-height: 24px;
+            color: red;
+        }
+    </style>
+         
+</head>
+
+    <body>
+        <div id="pswd_info" style="display: block;">
+						<h4>A senha deve seguir os seguintes requisitos:</h4>
+						<ul>
+							<li id="letra" class="valid">Pelo menos <strong>uma letra</strong></li>
+							<li id="maiuscula" class="invalid">Pelo menos <strong>uma letra maiúscula</strong></li>
+							<li id="numero" class="invalid">Pelo menos <strong> um número</strong></li>
+							<li id="tamanho" class="invalid">Pelo menos <strong>8 caracteres</strong>  </li>
+						
+                        </ul>
+
+        </div>
+        <br><br>
+        <a href="http://www.rapidtables.com/web/color/html-color-codes.htm">Validação</a>
+        <p id='rgb'></p>
+        <p id='hex'></p>
+        
+        <script>
+            var element1 = document.getElementById('maiuscula');
+            rgb = window.getComputedStyle(element1, null).getPropertyValue('color');
+            document.getElementById('rgb').innerHTML = rgb;
+            var hex = rgb.match(/\d+/g);
+            if (hex) {
+                      // incrementa para cada valor do array, convertando os valores.
+                      hex = hex.reduce(function(acc, value) {
+                        alert(acc + ('0' + (+value).toString(16)).slice(-2));
+                        return acc + ('0' + (+value).toString(16)).slice(-2);
+                      }, '#')
+                    }
+            document.getElementById('hex').innerHTML = hex;
+        </script>
+    </body>
+    
+</html>
