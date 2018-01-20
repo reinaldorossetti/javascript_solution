@@ -4,7 +4,7 @@ A primeira vista a quantidade de linhas posso dizer que não faz muito sentido c
 
 Vantagens do Protractor:<br>
 => Não precisou da instância do browser;<br>
-=> É um pouco menos verboso em escrita de código;<br>
+=> É um pouco menos verboso em escrita de código dos comandos;<br>
 => Já tem um assert padrão, não preciso importar nenhuma biblioteca.
 
 Vantagens do Selenium:<br>
