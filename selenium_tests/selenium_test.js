@@ -3,5 +3,5 @@ const d = new Builder().forBrowser('chrome').build(); d.get('http://www.google.c
 (async function google_search() {
     await d.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
     await d.wait(until.titleIs('webdriver - Pesquisa Google'), 15000);
-	await d.close();
+    await d.close();
 })();
