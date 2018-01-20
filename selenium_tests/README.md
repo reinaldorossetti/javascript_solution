@@ -9,5 +9,5 @@ Vantagens do Protractor:<br>
 
 Vantagens do Selenium:<br>
 => Tem vários tipos de espera, pelo visto a espera do Protractor é interna.<br>
-=> O Selenium é o core do Protractor, ou seja você também pode criar seu Framework e adaptar ao seu projeto.
+=> O Selenium é o core do Protractor, ou seja você também pode criar seu Framework e adaptar ao seu projeto.<br>
 => É um Framework bem flexível, você pode adicionar outras Bibliotecas como Cucumber e etc.
