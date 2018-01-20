@@ -1,9 +1,9 @@
-const {Builder, By, Key, until} = require('selenium-webdriver');
-(async function example() {
-  const driver = await new Builder().forBrowser('chrome').build();
+const {Builder, By, Key, until} = require('selenium-webdriver')
+const d = await new Builder().forBrowser('chrome').build();
+(async function google_search() {
   try {
-    await driver.get('http://www.google.com/');
-    await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
-    await driver.wait(until.titleIs('webdriver - Google Search'), 5000);
-  } finally { await driver.close();}
+    await d.get('http://www.google.com/ncr');
+    await d.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
+    await d.wait(until.titleIs('webdriver - Search'), 5000);
+  } finally { await d.close();}
 })();
